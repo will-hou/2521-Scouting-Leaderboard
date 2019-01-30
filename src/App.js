@@ -7,27 +7,14 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import './App.css';
 
-import reduce from 'lodash'
-
-
-  // function loadJson() {
-
-  //   const response =  fetch("https://api.jsonbin.io/b/5c50f65da3fb18257ac82555")
-
-  //   const json =  response.json()
-
-  //   return formatJson(json)
-  // }
-
-
 function formatJson(json_data) {
   var scout_count = {}
   const metric_name = 'Scout Name'
-    var metric_key = null
+  var metric_key = null
 
   // Find the key corresponding to the "Scout Name" metric
   Object.entries(json_data.teams[Object.keys(json_data.teams)[0]][0].metrics).forEach(obj => {
-    if(obj[1].name.trim() == metric_name) {
+    if(obj[1].name.trim() === metric_name) {
       metric_key = obj[0]
     }
   }) 
@@ -39,7 +26,6 @@ function formatJson(json_data) {
       if ((obj.name).length < 5) {
         // Make sure the scouter name field isn't empty
         if(obj.metrics[metric_key].value != null) {
-
           var scouterName = (obj.metrics[metric_key].value).trim()
           // Count the number of times a scouter scouted
           if (scout_count[scouterName] == null) {
@@ -52,33 +38,32 @@ function formatJson(json_data) {
       }
     })
   }
-  // console.log(scout_count)
-  return scout_count
+
+  var sorted = []
+  for (var scoutName in scout_count) {
+    sorted.push([scoutName, scout_count[scoutName]])
+  }
+
+  sorted = sorted.sort(function(a, b) {
+    return b[1] - a[1];
+  })
+
+  return sorted
 }
 
 function createRows(data) {
   const rows = []
 
-  // const data = await loadJson()
-  // const data = {John :5, "Phil": 7}
   console.log(data)
 
-  for (var scoutName in data){
-  //   // console.log(scoutName, data[scoutName])
-    rows.push(<LeaderboardRow key={scoutName} name={scoutName} scouts={data[scoutName]}/>)
-  
-  }
-
-  // data.map(person => {
-  //   rows.push(
-  //     <LeaderboardRow name={person.name} scouts={person.scouts}/>
-  //   )
-  // })
+  data.forEach(person => {
+    rows.push(
+      <LeaderboardRow name={person[0]} scouts={person[1]}/>
+    )
+  })
   console.log(rows)
   return rows
 }
-
-
 
 class Leaderboard extends Component {
 
@@ -90,7 +75,6 @@ class Leaderboard extends Component {
     fetch("https://api.jsonbin.io/b/5c50f65da3fb18257ac82555")
     .then(response => response.json())
     .then(data => {
-      // console.log(data)
       const formatted_data = formatJson(data)
       const rows = createRows(formatted_data)
       this.setState({rows: rows})
