@@ -31,10 +31,8 @@ class Leaderboard extends Component {
     .then(response => response.json())
     .then(data => {
       const formatted_data = formatJson(data)
-      console.log("whee")
       const rows = this.createRows(formatted_data)
       this.setState({rows: rows})
-      console.log(this.state)
     })
   }
 
