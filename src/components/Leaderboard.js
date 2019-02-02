@@ -26,12 +26,15 @@ class Leaderboard extends Component {
       }
 
   componentDidMount() {
-    fetch("https://api.jsonbin.io/b/5c50f65da3fb18257ac82555")
+    // fetch("https://api.jsonbin.io/b/5c50f65da3fb18257ac82555")
+    fetch("https://jsonstorage.net/api/items/dfd580d4-e3bf-416a-a695-810b196d41ba")
     .then(response => response.json())
     .then(data => {
       const formatted_data = formatJson(data)
+      console.log("whee")
       const rows = this.createRows(formatted_data)
       this.setState({rows: rows})
+      console.log(this.state)
     })
   }
 

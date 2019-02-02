@@ -1,13 +1,15 @@
 import React from 'react'
 import {Component}  from 'react';
 import Leaderboard from "./components/Leaderboard";
-
+import './styles/Leaderboard.css'
 
 class App extends Component {
 
   render() {
     return (
-      <Leaderboard />
+      <div className='Leaderboard'>
+        <Leaderboard />
+      </div>
     )
   }
 }

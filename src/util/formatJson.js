@@ -1,6 +1,9 @@
+import toTitleCase from '../util/utils.js'
+
+
 function formatJson(json_data) {
     var scout_count = {}
-    const metric_name = 'Scout Name'
+    const metric_name = 'Name'
     var metric_key = null
   
     // Find the key corresponding to the "Scout Name" metric
@@ -9,30 +12,34 @@ function formatJson(json_data) {
         metric_key = obj[0]
       }
     }) 
-  
+    
+    console.log(json_data.teams)
     for (var team in json_data.teams) {
-      // Loop through each team
+      // Loop through each team 
+      console.log(json_data.teams[team])
       json_data.teams[team].forEach((obj) => {
         // Don't include scouts that have didn't change the name of the scout
-        if ((obj.name).length < 5) {
-          // Make sure the scouter name field isn't empty
+        if (obj.name != null && (obj.name).length < 5 && Object.keys(obj.metrics).length > 0) {
+            console.log(obj.name)
+        // Make sure the scouter name field isn't empty
           if(obj.metrics[metric_key].value != null) {
-            var scouterName = (obj.metrics[metric_key].value).trim()
+            var scouterName = (obj.metrics[metric_key].value).trim().toUpperCase()
             // Count the number of times a scouter scouted
             if (scout_count[scouterName] == null) {
               scout_count[scouterName] = 1
             } else {
               scout_count[scouterName] += 1
             }
-            // console.log(obj.metrics[metric_key].value.trim())
           }
         }
       })
     }
+
+
   
     var sorted = []
     for (var scoutName in scout_count) {
-      sorted.push([scoutName, scout_count[scoutName]])
+      sorted.push([toTitleCase(scoutName), scout_count[scoutName]])
     }
   
     sorted = sorted.sort(function(a, b) {
