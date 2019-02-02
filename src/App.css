@@ -30,3 +30,10 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(109,127,253,1) 0%, rgba(168,91,245,1) 90% );
+  /* background: rgb(2,0,36); */
+  /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(123,19,130,1) 43%, rgba(133,8,126,1) 100%, rgba(0,212,255,1) 100%); */ */
+
+}

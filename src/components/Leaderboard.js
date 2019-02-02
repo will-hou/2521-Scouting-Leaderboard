@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import Table from '@material-ui/core/Table';
 import {LeaderboardRow} from './LeaderboardRow'
 import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
+import CustomTableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
 import formatJson from '../util/formatJson.js'
+import "../styles/Leaderboard.css"
+import Paper from '@material-ui/core/Paper'
+
 
 class Leaderboard extends Component {
 
@@ -38,17 +41,19 @@ class Leaderboard extends Component {
 
   render() {
     return (
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Scouter Name</TableCell>
-            <TableCell>Number of Scouts</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {this.state.rows}
-        </TableBody>
-      </Table>
+    <Paper className='Leaderboard' elevation={9}>
+        <Table className='Leaderboard'>
+            <TableHead>
+            <TableRow>
+                <CustomTableCell align='center'>Scouter Name</CustomTableCell>
+                <CustomTableCell align='center'>Number of Scouts</CustomTableCell>
+            </TableRow>
+            </TableHead>
+            <TableBody>
+            {this.state.rows}
+            </TableBody>
+        </Table>
+    </Paper>
     )
   }
 }

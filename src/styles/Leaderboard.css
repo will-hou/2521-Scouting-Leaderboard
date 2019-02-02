@@ -6,15 +6,33 @@ left: 0;
 margin-left:auto; 
 margin-right:auto;
 
-height: calc(100vh - 64px - 10px);
+/* height: calc(100vh - 64px - 10px); */
+height: auto;
 width: calc(50vw);
 
-margin-top: 20vh;
+margin-top: 10vh;
 margin-bottom: 5px;
 
 padding-left: 10px;
 padding-right: 10px;
-
 overflow: overlay;
 
+background: white;
+
+}
+
+.TableRow {
+    /* height: 25 !important;
+    overflow: overlay; */
+    font-weight: 'bold'
+}
+
+.TableHeader {
+    color: red
+}
+
+.Paper{
+    width: '100%';
+    margin-top: 10px;
+    overflow-X: 'auto';
 }
