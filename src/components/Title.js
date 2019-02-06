@@ -1,8 +1,6 @@
 import React from 'react'
 import {Component} from 'react'
 import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper'
-
 import "../styles/Title.css"
 
 class Title extends Component {

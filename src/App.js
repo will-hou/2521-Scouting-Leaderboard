@@ -4,10 +4,6 @@ import Leaderboard from './components/Leaderboard';
 import Title from './components/Title'
 import './styles/Leaderboard.css'
 
-import Paper from '@material-ui/core/Paper'
-
-
-
 class App extends Component {
 
   render() {
