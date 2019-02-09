@@ -34,8 +34,70 @@ background: white;
     font-weight: bold
 }
 
-.Paper{
+.Paper {
     width: '100%';
     margin-top: 10px;
     overflow-X: 'auto';
+}
+
+/* TODO: Try and make this DRY if possible */
+
+.medal-gold {
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: gold;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+}
+
+.medal-silver {
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: silver;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+}
+
+.medal-bronze {
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: #cd7f32;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+}
+
+.medal-other {
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: white ;
+    color: black;
+    text-align: center;
+    font-size: 2em;
 }
