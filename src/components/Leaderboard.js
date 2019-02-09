@@ -22,7 +22,7 @@ class Leaderboard extends Component {
             
         data.forEach(person => {
           rows.push(
-            <LeaderboardRow key={person[0]} name={person[0]} scouts={person[1]}/>
+            <LeaderboardRow key={person[0]} index={data.indexOf(person) + 1} name={person[0]} scouts={person[1]}/>
           )
         })
         return rows
@@ -46,8 +46,9 @@ class Leaderboard extends Component {
         <Table className='Leaderboard'>
             <TableHead>
             <TableRow>
-                <CustomTableCell align='center'>Scouter Name</CustomTableCell>
-                <CustomTableCell align='center'>Number of Scouts</CustomTableCell>
+                <CustomTableCell align='left'></CustomTableCell>
+                <CustomTableCell align='left'>Scouter Name</CustomTableCell>
+                <CustomTableCell align='left'>Number of Scouts</CustomTableCell>
             </TableRow>
             </TableHead>
             <TableBody>

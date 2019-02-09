@@ -22,13 +22,16 @@ background: white;
 }
 
 .TableRow {
-    /* height: 25 !important;
-    overflow: overlay; */
     font-weight: 'bold'
 }
 
 .TableHeader {
     color: red
+}
+
+.LeaderboardPosition {
+    width: 5vw;
+    font-weight: bold
 }
 
 .Paper{
