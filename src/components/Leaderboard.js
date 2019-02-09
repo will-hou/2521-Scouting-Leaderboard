@@ -30,8 +30,8 @@ class Leaderboard extends Component {
 
   componentDidMount() {
     // fetch("https://api.jsonbin.io/b/5c50f65da3fb18257ac82555")
-    // fetch("https://jsonstorage.net/api/items/dfd580d4-e3bf-416a-a695-810b196d41ba")
-    fetch("https://jsonstorage.net/api/items/cd10d9ec-dc6c-4a22-a836-31d6a4438761")
+    fetch("https://jsonstorage.net/api/items/dfd580d4-e3bf-416a-a695-810b196d41ba")
+    // fetch("https://jsonstorage.net/api/items/cd10d9ec-dc6c-4a22-a836-31d6a4438761")
     .then(response => response.json())
     .then(data => {
       const formatted_data = formatJson(data)
@@ -47,8 +47,8 @@ class Leaderboard extends Component {
             <TableHead>
             <TableRow>
                 <CustomTableCell align='left'></CustomTableCell>
-                <CustomTableCell align='left'>Scouter Name</CustomTableCell>
-                <CustomTableCell align='left'>Number of Scouts</CustomTableCell>
+                <CustomTableCell align='left'><span class='LeaderboardHeaderText'>Scouter Name</span></CustomTableCell>
+                <CustomTableCell align='left'><span class='LeaderboardHeaderText'>Number of Scouts</span></CustomTableCell>
             </TableRow>
             </TableHead>
             <TableBody>

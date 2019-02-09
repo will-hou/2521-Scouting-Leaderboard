@@ -6,7 +6,6 @@ left: 0;
 margin-left:auto; 
 margin-right:auto;
 
-/* height: calc(100vh - 64px - 10px); */
 height: auto;
 width: calc(50vw);
 
@@ -18,19 +17,15 @@ padding-right: 10px;
 overflow: overlay;
 
 background: white;
-
 }
 
-.TableRow {
-    font-weight: 'bold'
-}
-
-.TableHeader {
-    color: red
+.LeaderboardHeaderText{
+    font-size: 1.5em;
+    font-weight: bold
 }
 
 .LeaderboardPosition {
-    width: 5vw;
+    width: 2vw;
     font-weight: bold
 }
 
