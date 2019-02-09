@@ -3,28 +3,21 @@ body {
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
   user-select: none;
-  /* background: linear-gradient(to right, #834d9b, #d04ed6); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* background: linear-gradient(to right, #6a3093, #a044ff); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  animation: colorchange 10s infinite; /* animation-name followed by duration in seconds*/
-       /* you could also use milliseconds (ms) or something like 2.5s */
+  animation: colorchange 10s infinite; 
   -webkit-animation: colorchange 5s infinite; /* Chrome and Safari */
 }
 @keyframes colorchange
 {
-  0%   {background: #c542f4}
+  0%   {background: #a83bcfc7}
   50%  {background: #8337a3}
-  100% {background: #c542f4}
+  100% {background: #a83bcfc7}
 }
   
-
 @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
 {
-  0%   {background: red;}
-  25%  {background: yellow;}
-  50%  {background: blue;}
-  75%  {background: green;}
-  100% {background: red;}
+  0%   {background: #a83bcfc7}
+  50%  {background: #8337a3}
+  100% {background: #a83bcfc7}
 }
 
 
