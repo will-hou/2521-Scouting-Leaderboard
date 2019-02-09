@@ -40,64 +40,36 @@ background: white;
     overflow-X: 'auto';
 }
 
-/* TODO: Try and make this DRY if possible */
+.LeaderboardText {
+    font-size: 2em;
+    font-family: 'Helvetica'
+}
 
-.medal-gold {
+.medal {
     display: block;
     height: 60px;
     width: 60px;
     line-height: 60px;
-
     -moz-border-radius: 30px; /* or 50% */
     border-radius: 30px; /* or 50% */
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
 
+.medal.medal-gold {
     background-color: gold;
-    color: black;
-    text-align: center;
-    font-size: 2em;
+
 }
 
-.medal-silver {
-    display: block;
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-
-    -moz-border-radius: 30px; /* or 50% */
-    border-radius: 30px; /* or 50% */
-
+.medal.medal-silver {
     background-color: silver;
-    color: black;
-    text-align: center;
-    font-size: 2em;
 }
 
-.medal-bronze {
-    display: block;
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-
-    -moz-border-radius: 30px; /* or 50% */
-    border-radius: 30px; /* or 50% */
-
+.medal.medal-bronze {
     background-color: #cd7f32;
-    color: black;
-    text-align: center;
-    font-size: 2em;
 }
 
-.medal-other {
-    display: block;
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-
-    -moz-border-radius: 30px; /* or 50% */
-    border-radius: 30px; /* or 50% */
-
+.medal.medal-other {
     background-color: white ;
-    color: black;
-    text-align: center;
-    font-size: 2em;
 }
