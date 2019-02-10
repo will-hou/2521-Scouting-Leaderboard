@@ -10,6 +10,7 @@ import formatJson from '../util/formatJson.js'
 import "../styles/Leaderboard.css"
 import Paper from '@material-ui/core/Paper'
 
+import { configuration } from '../util/configuration.js'
 
 class Leaderboard extends Component {
 
@@ -19,7 +20,7 @@ class Leaderboard extends Component {
 
     createRows(data) {
         const rows = []
-            
+        
         data.forEach(person => {
           rows.push(
             <LeaderboardRow key={person[0]} index={data.indexOf(person) + 1} name={person[0]} scouts={person[1]}/>
@@ -29,9 +30,7 @@ class Leaderboard extends Component {
       }
 
   componentDidMount() {
-    fetch("https://api.jsonbin.io/b/5c50f65da3fb18257ac82555")
-    // fetch("https://jsonstorage.net/api/items/dfd580d4-e3bf-416a-a695-810b196d41ba")
-    // fetch("https://jsonstorage.net/api/items/cd10d9ec-dc6c-4a22-a836-31d6a4438761")
+    fetch(configuration.url)
     .then(response => response.json())
     .then(data => {
       const formatted_data = formatJson(data)
