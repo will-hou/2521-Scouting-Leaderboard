@@ -1,10 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Helvetica', 'Arial', 'serif', 'Times';
   user-select: none;
   animation: colorchange 10s infinite; 
   -webkit-animation: colorchange 5s infinite; /* Chrome and Safari */
+  margin-bottom: 20px;
 }
 @keyframes colorchange
 {

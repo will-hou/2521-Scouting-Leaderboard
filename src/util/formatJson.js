@@ -4,7 +4,7 @@ import toTitleCase from '../util/utils.js'
 function formatJson(json_data) {
     var scout_count = {}
     // Change this to be the name of the metric corresponding to the scout's name
-    const metric_name = 'Name'
+    const metric_name = 'Scout Name'
     var metric_key = null
   
     // Find the key corresponding to the "Scout Name" metric
