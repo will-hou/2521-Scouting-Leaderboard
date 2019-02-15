@@ -30,6 +30,7 @@ class Leaderboard extends Component {
       }
 
   componentDidMount() {
+    // Fetch and format JSON data
     fetch(configuration.url)
     .then(response => response.json())
     .then(data => {

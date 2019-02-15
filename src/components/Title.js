@@ -8,7 +8,7 @@ class Title extends Component {
 
     render() {
         return(
-            <Paper classes={{ root: 'TitleOutterWrapper' }}>
+            <Paper classes={{ root: 'TitlePaperWrapper' }}>
                 <div class='TitleInnerWrapper'>
                     <Typography variant='h2' gutterBottom align='center'><span class='Title'>Match Scouting Leaderboard</span></Typography>
                     <span><Typography variant='h4' gutterButtom align='center'>Last Updated: Bunnybots 2018</Typography></span>

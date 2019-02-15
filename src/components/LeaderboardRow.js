@@ -6,7 +6,6 @@ import '../styles/Leaderboard.css'
 
 export class LeaderboardRow extends Component {
 
-
   getMedalColor(position) {
     switch (position)  {
       case 1: return <span className='medal medal-gold'>{this.props.index}</span>

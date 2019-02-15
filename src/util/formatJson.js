@@ -4,7 +4,7 @@ import { configuration } from '../util/configuration.js'
 
 function formatJson(json_data) {
     var scout_count = {}
-    // Change this to be the name of the metric corresponding to the scout's name
+    // The name of the metric corresponding to the scout's name
     const metric_name = configuration.metricName
     var metric_key = null
   
@@ -18,7 +18,7 @@ function formatJson(json_data) {
     for (var team in json_data.teams) {
       // Loop through each team 
       json_data.teams[team].forEach((obj) => {
-        // Don't include scouts that have didn't change the name of the scout
+        // Don't include scouts that didn't change the name of the scout
         if (obj.name != null && (obj.name).length < 5 && Object.keys(obj.metrics).length > 0) {
         // Make sure the scouter name field isn't empty
           if(obj.metrics[metric_key].value != null) {
@@ -34,8 +34,6 @@ function formatJson(json_data) {
       })
     }
 
-
-  
     var sorted = []
     for (var scoutName in scout_count) {
       sorted.push([toTitleCase(scoutName), scout_count[scoutName]])

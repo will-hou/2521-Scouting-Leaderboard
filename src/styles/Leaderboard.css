@@ -1,22 +1,21 @@
 .Leaderboard {
+    position: center;
+    left: 0;
 
-position: center;
-left: 0;
+    margin-left:auto; 
+    margin-right:auto;
 
-margin-left:auto; 
-margin-right:auto;
+    height: auto;
+    width: calc(50vw);
 
-height: auto;
-width: calc(50vw);
+    margin-top: 10vh;
+    margin-bottom: 5px;
 
-margin-top: 10vh;
-margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: overlay;
 
-padding-left: 10px;
-padding-right: 10px;
-overflow: overlay;
-
-background: white;
+    background: white;
 }
 
 .LeaderboardHeaderText{

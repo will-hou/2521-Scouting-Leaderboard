@@ -5,12 +5,11 @@
     border-radius: 4px;
 }
 
-.TitleOutterWrapper {
+.TitlePaperWrapper {
     padding: 10px;
     margin: 20px auto;
-    width: calc(55vw); 
+    width: calc(60vw); 
 }
-
 
 .Title {
     font-weight: bold;
