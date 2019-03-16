@@ -2,10 +2,11 @@ const configuration = {
     // The metric associated with the Scout's Name 
     metricName: 'Scout Name',
     // The url location of the scouting data
-    url: 'https://api.jsonbin.io/b/5c50f65da3fb18257ac82555',
+    // url: 'https://api.jsonbin.io/b/5c50f65da3fb18257ac82555',
+    url: 'https://jsonstorage.net/api/items/c8969c12-692c-4d66-beb6-b63af99585e9',
 
     // When the leaderboard was last updated
-    lastUpdated: 'Bunnybots 2018'
+    lastUpdated: 'Clackams Day 1'
 
     // Data
     // 'https://jsonstorage.net/api/items/abe32013-f3a4-41c4-b77a-f4b9091d5a86' //scout1_test_combined.json
