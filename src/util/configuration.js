@@ -3,10 +3,12 @@ const configuration = {
     metricName: 'Scout Name',
     // The url location of the scouting data
     // url: 'https://api.jsonbin.io/b/5c50f65da3fb18257ac82555',
-    url: 'https://jsonstorage.net/api/items/c8969c12-692c-4d66-beb6-b63af99585e9',
+    //Clackams Day 1 url: 
+    // url: 'https://jsonstorage.net/api/items/c8969c12-692c-4d66-beb6-b63af99585e9',
+    url: 'https://jsonstorage.net/api/items/64c24ad3-1052-44d5-9482-3532da999cdd',
 
     // When the leaderboard was last updated
-    lastUpdated: 'Clackams Day 1'
+    lastUpdated: 'Clackamas Day 2 (Before Q65)'
 
     // Data
     // 'https://jsonstorage.net/api/items/abe32013-f3a4-41c4-b77a-f4b9091d5a86' //scout1_test_combined.json
