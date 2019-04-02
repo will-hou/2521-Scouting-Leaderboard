@@ -31,13 +31,18 @@ class Leaderboard extends Component {
 
   componentDidMount() {
     // Fetch and format JSON data
-    fetch(configuration.url)
-    .then(response => response.json())
-    .then(data => {
-      const formatted_data = formatJson(data)
-      const rows = this.createRows(formatted_data)
-      this.setState({rows: rows})
-    })
+    // fetch(configuration.url)
+    // .then(response => response.json())
+    // .then(data => {
+    //   const formatted_data = formatJson(data)
+    //   const rows = this.createRows(formatted_data)
+    //   this.setState({rows: rows})
+    // })
+    var json_data = require('../clackams_and_oswego.json')
+    const formatted_data = formatJson(json_data)
+    const rows = this.createRows(formatted_data)
+    this.setState({rows: rows})
+
   }
 
   render() {  

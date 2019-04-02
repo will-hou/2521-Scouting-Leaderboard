@@ -19,7 +19,8 @@ function formatJson(json_data) {
       // Loop through each team 
       json_data.teams[team].forEach((obj) => {
         // Don't include scouts that didn't change the name of the scout
-        if (obj.name != null && (obj.name).length < 5 && Object.keys(obj.metrics).length > 0) {
+        // if (obj.name != null  && Object.keys(obj.metrics).length > 0) {
+        if (obj.name != null  && Object.keys(obj.metrics).length > 0) {
         // Make sure the scouter name field isn't empty
           if(obj.metrics[metric_key].value != null) {
             var scouterName = (obj.metrics[metric_key].value).trim().toUpperCase()
