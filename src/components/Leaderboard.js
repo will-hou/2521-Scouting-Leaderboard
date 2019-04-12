@@ -38,7 +38,7 @@ class Leaderboard extends Component {
     //   const rows = this.createRows(formatted_data)
     //   this.setState({rows: rows})
     // })
-    var json_data = require('../clackams_and_oswego.json')
+    var json_data = require('../2019_match_scouts.json')
     const formatted_data = formatJson(json_data)
     const rows = this.createRows(formatted_data)
     this.setState({rows: rows})
